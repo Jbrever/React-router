@@ -1,14 +1,15 @@
 import React from "react";
 import {Link} from 'react-router-dom'
 import {useNavigate} from 'react-router-dom'
-function Header(){
+function Header(){  
   const navigate = useNavigate();
-  
   function goToContact(){
-    navigate('/contact');
+    const name = "juber";
+    navigate('/contact',{state:{fName:name}});
   }
   function goToHelp(){
-    navigate('/help');
+    const name = 'juber';
+    navigate('/help',{state:{fName:name}});
   }
     return(
       <>
